@@ -9,7 +9,7 @@
   (is (equal
        '(foo bar baz)
        (progn
-         #♦
+         #@
          '
          foo
          bar
@@ -17,7 +17,7 @@
 
          )))
   (is (= 55
-  #♦
+  #@
   labels
    :group
     fib (n a1 a2)
