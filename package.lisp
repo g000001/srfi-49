@@ -2,10 +2,10 @@
 
 (cl:in-package :cl-user)
 
-(defpackage :srfi-49
-  (:use)
-  (:export))
 
-(defpackage :srfi-49.internal
-  (:use :srfi-49 :cl :named-readtables :fiveam)
-    (:shadow :map :lambda :loop :member :assoc))
+(defpackage "https://github.com/g000001/srfi-49"
+  (:use cl named-readtables fiveam)
+  (:shadow :map :lambda :loop :member :assoc))
+
+
+;;; *EOF*

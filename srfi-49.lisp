@@ -1,6 +1,6 @@
 ;;;; srfi-49.lisp
 
-(cl:in-package :srfi-49.internal)
+(cl:in-package "https://github.com/g000001/srfi-49")
 ;; (in-readtable :srfi-49)
 
 (def-suite srfi-49)
@@ -9,8 +9,9 @@
 
 ;;; "srfi-49" goes here. Hacks and glory await!
 
-(define-function sugar-read-save #'cl:read-preserving-whitespace)
-(define-function sugar-load-save #'cl:load)
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (define-function sugar-read-save #'cl:read-preserving-whitespace)
+  (define-function sugar-load-save #'cl:load))
 
 (define-function (readquote level port qt)
   (declare (ignore level))
@@ -62,7 +63,7 @@
      line )
     ((null? line)
      line )
-    ((eql (car line) :group)
+    ((and (symbolp (car line)) (string-equal (car line) 'group))
      (cdr line) )
     ((null? (car line))
      (cdr line) )

@@ -1,4 +1,8 @@
-* SRFI 49: Indentation-sensitive syntax
+# SRFI 49 for CL: Indentation-sensitive syntax
+
+* https://srfi.schemers.org/srfi-49
+* License: Unlicense
+
 - Copyright (C) 2005 by Egil Möller . All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining

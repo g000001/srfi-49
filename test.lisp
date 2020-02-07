@@ -1,9 +1,14 @@
-(cl:in-package :srfi-49.internal)
+(cl:in-package "https://github.com/g000001/srfi-49")
+
+
 (in-readtable :srfi-49)
+
 
 (def-suite srfi-49)
 
+
 (in-suite srfi-49)
+
 
 (test sugar-read
   (is (equal
@@ -19,23 +24,23 @@
   (is (= 55
   #@
   labels
-   :group
+   group
     fib (n a1 a2)
      cond
-      :group
+      group
        (zerop n)
        a2
-      :group
+      group
        (= 1 n)
        a1
-      :group
+      group
        T
-       :group
+       group
         fib
         (1- n)
         (+ a1 a2)
         a1
-   :group
+   group
     fib
     10
     1
@@ -43,4 +48,5 @@
 
   )))
 
-;;; eof
+
+;;; *EOF*
